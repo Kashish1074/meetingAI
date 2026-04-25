@@ -26,8 +26,7 @@ function Section({ title, children }) {
 
 export default function AnalysisResult({ data, onToggleAction, onToggleUnresolved }) {
   const [activeTab, setActiveTab] = useState('overview');
-  const { participants = [], actionItems = [], unresolvedTopics = [], topicClusters = {}, dominantSpeaker, dominantPct, insight } = data;
-
+  const { participants = [], actionItems = [], unresolvedTopics = [], topicClusters = {}, insight } = data;
   const chartData = {
     labels: participants.map(p => p.name),
     datasets: [{
